@@ -6,64 +6,62 @@
     <div class="history-information" id="history">
       <br />
       <p>
-        Published:
+        Updated:
       </p>
       <br />
       <p>
-        Updated:
+        Published:
       </p>
     </div>
 
     <div class="related-information">
       <p>
+        <span class="updated definition">27 July 2016</span>
+        <strong>10:49am</strong>
+      <br/>
+        Section about paying by cheque through the post has been updated.
+        <br/><a href="./">View current version</a>
+      </p>
+      <div class="change-notes" data-module="toggle">
+        <p>
+          <a href="#full-history" data-controls="full-history" data-expanded="false" data-module="track-click" data-track-category="content-history" data-track-action="full-page-history-toggled" data-track-label="full-history" role="button" aria-controls="full-history" aria-expanded="false">
+            + see all updates
+          </a>
+        </p>
+
+        <div class="js-hidden" id="full-history" aria-live="polite" role="region">
+          <span class="arrow"></span>
+          <ol>
+            <li>
+              <time datetime="2016-04-01T08:00:06.000+01:00">1 April 2016</time>
+              <strong>8:06am</strong><br />
+              Credit card fees have changed.
+              <br/><a href="./v3.2.html">View this version</a>
+              <br/><a href="./v3.2-diff.html">Compare this version to current version</a>
+            </li>
+            <li>
+              <time datetime="2016-02-29T09:30:12.000+00:00" class="timestamp">29 February 2016</time>
+              <strong>9:30am</strong><br />
+              Overseas payment details changed.
+              <br/><a href="./v2.0.html">View this version</a>
+              <br/><a href="./v2.0-diff.html">Compare this version to current version</a>
+            </li>
+            <li>
+              <time datetime="2015-12-02T14:31:42.000+00:00" class="timestamp">2 December 2015</time>
+              <strong>2:31pm</strong><br />
+              First published.
+              <br/><a href="./v1.10.html">View this version</a>
+              <br/><a href="./v1.10-diff.html">Compare this version to current version</a>
+            </li>
+          </ol>
+        </div>
         <span class="published definition">2 December 2015</span>
         <strong>2:31pm</strong>
       </p>
 
-      <p>
-        <span class="updated definition">{{ include.updated_date }}</span>
-        <strong>{{ include.updated_time }}</strong>
-      </p>
 
-      {% if include.version > 1 %}
-      <p>
-        Section about paying by cheque through the post has been updated.
-        <br/><a href="./">View current version</a>
-      </p>
-
-    <div class="change-notes" data-module="toggle">
-      <p>
-        <a href="#full-history" data-controls="full-history" data-expanded="false" data-module="track-click" data-track-category="content-history" data-track-action="full-page-history-toggled" data-track-label="full-history" role="button" aria-controls="full-history" aria-expanded="false">
-          + see all updates
-        </a>
-      </p>
-
-      <div class="js-hidden" id="full-history" aria-live="polite" role="region">
-        <span class="arrow"></span>
-        <ol>
-          <li>
-            <time datetime="2016-04-01T08:00:06.000+01:00" class="timestamp">1 April 2016</time>
-            <strong>8:06am</strong><br />
-            Credit card fees have changed.
-            <br/><a href="./v3.2.html">View this version</a>
-            <br/><a href="./v3.2-diff.html">Compare this version to current version</a>
-          </li>
-          <li>
-            <time datetime="2016-02-29T09:30:12.000+00:00" class="timestamp">29 February 2016</time>
-            <strong>9:30am</strong><br />
-            Overseas payment details changed.
-            <br/><a href="./v2.0.html">View this version</a>
-            <br/><a href="./v2.0-diff.html">Compare this version to current version</a>
-          </li>
-          <li>
-            <time datetime="2015-12-02T14:31:42.000+00:00" class="timestamp">2 December 2015</time>
-            <strong>2:31pm</strong><br />
-            {% endif %}
-            First published.
-            <br/><a href="./v1.10.html">View this version</a>
-            <br/><a href="./v1.10-diff.html">Compare this version to current version</a>
-          </li>
-        </ol>
-      </div>
     </div>
   </div>
+
+  <!-- {% if include.version > 1 %} -->
+  <!-- {% endif %} -->
