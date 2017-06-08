@@ -4,13 +4,8 @@
     </h2>
 
     <div class="history-information" id="history">
-      <br />
       <p>
-        Updated:
-      </p>
-      <br />
-      <p>
-        Published:
+        Last updated:
       </p>
     </div>
 
@@ -18,10 +13,10 @@
       {% if include.version == 4 %}
       <p class="current-version">
         <span class="secondary-text">You're viewing:</span>
+        <br/>
       {% else %}
       <p>
       {% endif %}
-      <br/>
       <span class="date">27 July 2016</span>
       <br/>
       Section about paying by cheque through the post has been updated.
@@ -69,18 +64,25 @@
             </li>
           </ol>
         </div>
-        {% if include.version == 1 %}
-        <p class="current-version">
-          <span class="secondary-text">You're viewing:</span><br/>
-        {% else %}
-        <p>
-        {% endif %}
-        <span class="date">2 December 2015</span><br/>
-        First published.
-        {% if include.version != 1 %}
-        <br/><a href="./view-version-1.html">View this version</a>
-        {% endif %}
-        <br/><a href="./v1.10-diff.html">Compare this version to current version</a>
-      </p>
     </div>
+  </div>
+  <div class="history-information" id="history">
+    <p>
+      Published:
+    </p>
+  </div>
+  <div class="related-information">
+    {% if include.version == 1 %}
+    <p class="current-version">
+      <span class="secondary-text">You're viewing:</span><br/>
+      {% else %}
+      <p>
+      {% endif %}
+      <span class="date">2 December 2015</span><br/>
+      First published.
+      {% if include.version != 1 %}
+      <br/><a href="./view-version-1.html">View this version</a>
+      {% endif %}
+      <br/><a href="./v1.10-diff.html">Compare this version to current version</a>
+    </p>
   </div>
