@@ -4,32 +4,27 @@
     </h2>
 
     <div class="history-information" id="history">
-      <br />
       <p>
-        Published:
-      </p>
-      <br />
-      <p>
-        Updated:
+        Last updated:
       </p>
     </div>
 
     <div class="related-information">
+      {% if include.version == 4 %}
+      <p class="current-version">
+        <span class="secondary-text">You're viewing:</span>
+        <br/>
+      {% else %}
       <p>
-        <span class="published definition">2 December 2015</span>
-        <strong>2:31pm</strong>
+      {% endif %}
+      <span class="date">27 July 2016</span>
+      <br/>
+      Section about paying by cheque through the post has been updated.
+      {% if include.version != 4 %}
+      <br/><a href="./">View current version</a>
+      {% endif %}
+      </span>
       </p>
-
-      <p>
-        <span class="updated definition">27 July 2016</span>
-        <strong>10:49am</strong>
-      </p>
-
-      <p>
-        Section about paying by cheque through the post has been updated.
-        <br/><a href="./">View current version</a>
-      </p>
-
       <div class="change-notes" data-module="toggle">
         <p>
           <a href="#full-history" data-controls="full-history" data-expanded="false" data-module="track-click" data-track-category="content-history" data-track-action="full-page-history-toggled" data-track-label="full-history" role="button" aria-controls="full-history" aria-expanded="false">
@@ -40,30 +35,54 @@
         <div class="js-hidden" id="full-history" aria-live="polite" role="region">
           <span class="arrow"></span>
           <ol>
+            {% if include.version == 3 %}
+            <li class="current-version">
+              <span class="secondary-text">You're viewing:</span><br/>
+            {% else %}
             <li>
-              <time datetime="2016-04-01T08:00:06.000+01:00" class="timestamp">1 April 2016</time>
-              <strong>8:06am</strong><br />
+            {% endif %}
+              <span class="date"><time datetime="2016-04-01T08:00:06.000+01:00">1 April 2016</time></span><br/>
               Credit card fees have changed.
-              <br/><a href="./v3.0.html">View this version</a>
-              <br/><a href="./v3.0-diff.html">Compare this version to current version</a>
+              {% if include.version != 3 %}
+              <br/><a href="./v3.2.html">View this version</a>
+              {% endif %}
+              <br/><a href="./v3.2-diff.html">Compare this version to current version</a>
             </li>
+            <br>
+            {% if include.version == 2 %}
+            <li class="current-version">
+              <span class="secondary-text">You're viewing:</span><br/>
+            {% else %}
             <li>
-              <time datetime="2016-02-29T09:30:12.000+00:00" class="timestamp">29 February 2016</time>
-              <strong>9:30am</strong><br />
+            {% endif %}
+              <span class="date"><time datetime="2016-02-29T09:30:12.000+00:00" class="timestamp">29 February 2016</time></span>
               Overseas payment details changed.
+              {% if include.version != 2 %}
               <br/><a href="./v2.0.html">View this version</a>
+              {% endif %}
               <br/><a href="./v2.0-diff.html">Compare this version to current version</a>
-            </li>
-            <li>
-              <time datetime="2015-12-02T14:31:42.000+00:00" class="timestamp">2 December 2015</time>
-              <strong>2:31pm</strong><br />
-              First published.
-              <br/><a href="./v1.0.html">View this version</a>
-              <br/><a href="./v1.0-diff.html">Compare this version to current version</a>
             </li>
           </ol>
         </div>
-      </div>
     </div>
   </div>
-
+  <div class="history-information" id="history">
+    <p>
+      Published:
+    </p>
+  </div>
+  <div class="related-information">
+    {% if include.version == 1 %}
+    <p class="current-version">
+      <span class="secondary-text">You're viewing:</span><br/>
+      {% else %}
+      <p>
+      {% endif %}
+      <span class="date">2 December 2015</span><br/>
+      First published.
+      {% if include.version != 1 %}
+      <br/><a href="./view-version-1.html">View this version</a>
+      {% endif %}
+      <br/><a href="./v1.10-diff.html">Compare this version to current version</a>
+    </p>
+  </div>
