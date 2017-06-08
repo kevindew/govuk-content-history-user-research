@@ -5,6 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>{{ page.title }} - GOV.UK</title>
+    {% include header-assets.html %}
 
     <!--[if gt IE 8]><!--><link href="../assets/govuk-template-c49b983af00205bcff91f0d722b6a1ef174e8fee7673f7297d83d4850a61e072.css" media="screen" rel="stylesheet">
 <!--<![endif]-->
@@ -14,7 +15,7 @@
     <link href="../assets/govuk-template-print-1076519521c2fffbbf75ab3b0d3b32ee2d96ac7e9778f1cdfac1771eefd1a1c0.css" media="print" rel="stylesheet">
 
     <link href="../assets/pay-stamp-duty-land-tax.css" rel="stylesheet">
-    
+
     <!--[if IE 8]><link href="https://assets.publishing.service.gov.uk/static/fonts-ie8-f5e3c18a96ecb0f37246556a27330202d6e18feffa05a3b67825024609629ac8.css" media="all" rel="stylesheet" /><![endif]-->
     <!--[if gte IE 9]><!--><link href="../assets/fonts-5ff8c53913434afd0072a480d7cfca67cace4c8d03f6ef96b78a4455728ce745.css" media="all" rel="stylesheet">
 <!--<![endif]-->
@@ -77,7 +78,7 @@
         <div class="header-global">
           <div class="header-logo">
             <a href="https://www.gov.uk" title="Go to the GOV.UK homepage" id="logo" class="content">
-              <img src="/assets/gov.uk_logotype_crown_invert_trans-203e1db49d3eff430d7dc450ce723c1002542fe1d2bce661b6d8571f14c1043c.png" width="36" height="32" alt=""> GOV.UK
+              <img src="../assets/gov.uk_logotype_crown_invert_trans-203e1db49d3eff430d7dc450ce723c1002542fe1d2bce661b6d8571f14c1043c.png" width="36" height="32" alt=""> GOV.UK
             </a>
           </div>
             <a href="#search" class="search-toggle js-header-toggle">Search</a>
@@ -178,123 +179,6 @@
 
 {{ content }}
 
-    </main>
-  <div class="report-a-problem-container">
-  <div class="report-a-problem-inner">
-    <div class="report-a-problem-content">
-      <h2>Help us improve GOV.UK</h2>
-      <form accept-charset="UTF-8" action="/contact/govuk/problem_reports" method="post">
-        <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
-        <input id="url" name="url" type="hidden" value="https://www.gov.uk/guidance/pay-stamp-duty-land-tax">
+</main>
 
-          <input id="source" name="source" type="hidden" value="">
-
-
-          <input id="page_owner" name="page_owner" type="hidden" value="">
-
-
-        <p>Don’t include personal or financial information like your National Insurance number or credit card details.</p>
-
-        <label for="what_doing">What you were doing</label>
-        <input id="what_doing" name="what_doing" type="text">
-
-        <label for="what_wrong">What went wrong</label>
-        <input id="what_wrong" name="what_wrong" type="text">
-
-        <div class="button-wrapper">
-          <button name="commit" type="submit" class="button">Send</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-</div>
-
-
-    <footer class="group js-footer" id="footer" role="contentinfo">
-
-      <div class="footer-wrapper">
-            <div class="footer-categories">
-      <div class="footer-explore">
-        <h2>Services and information</h2>
-
-        <ul>
-          <li><a href="https://www.gov.uk/browse/benefits">Benefits</a></li>
-          <li><a href="https://www.gov.uk/browse/births-deaths-marriages">Births, deaths, marriages and care</a></li>
-          <li><a href="https://www.gov.uk/browse/business">Business and self-employed</a></li>
-          <li><a href="https://www.gov.uk/browse/childcare-parenting">Childcare and parenting</a></li>
-          <li><a href="https://www.gov.uk/browse/citizenship">Citizenship and living in the UK</a></li>
-          <li><a href="https://www.gov.uk/browse/justice">Crime, justice and the law</a></li>
-          <li><a href="https://www.gov.uk/browse/disabilities">Disabled people</a></li>
-          <li><a href="https://www.gov.uk/browse/driving">Driving and transport</a></li>
-        </ul>
-        <ul>
-          <li><a href="https://www.gov.uk/browse/education">Education and learning</a></li>
-          <li><a href="https://www.gov.uk/browse/employing-people">Employing people</a></li>
-          <li><a href="https://www.gov.uk/browse/environment-countryside">Environment and countryside</a></li>
-          <li><a href="https://www.gov.uk/browse/housing-local-services">Housing and local services</a></li>
-          <li><a href="https://www.gov.uk/browse/tax">Money and tax</a></li>
-          <li><a href="https://www.gov.uk/browse/abroad">Passports, travel and living abroad</a></li>
-          <li><a href="https://www.gov.uk/browse/visas-immigration">Visas and immigration</a></li>
-          <li><a href="https://www.gov.uk/browse/working">Working, jobs and pensions</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-inside-government">
-        <h2>Departments and policy</h2>
-
-        <ul>
-          <li><a href="https://www.gov.uk/government/how-government-works">How government works</a></li>
-          <li><a href="https://www.gov.uk/government/organisations">Departments</a></li>
-          <li><a href="https://www.gov.uk/government/world">Worldwide</a></li>
-          <li><a href="https://www.gov.uk/government/policies">Policies</a></li>
-          <li><a href="https://www.gov.uk/government/publications">Publications</a></li>
-          <li><a href="https://www.gov.uk/government/announcements">Announcements</a></li>
-        </ul>
-      </div>
-      <hr>
-    </div>
-
-
-        <div class="footer-meta">
-          <div class="footer-meta-inner">
-              <h2 class="visuallyhidden">Support links</h2>
-<ul>
-  <li><a href="https://www.gov.uk/help">Help</a></li>
-  <li><a href="https://www.gov.uk/help/cookies">Cookies</a></li>
-  <li><a href="https://www.gov.uk/contact">Contact</a></li>
-  <li><a href="https://www.gov.uk/help/terms-conditions">Terms and conditions</a></li>
-  <li><a href="https://www.gov.uk/cymraeg" lang="cy" hreflang="cy">Rhestr o Wasanaethau Cymraeg</a></li>
-  <li>Built by the <a href="https://www.gov.uk/government/organisations/government-digital-service">Government Digital Service</a>
-</li>
-</ul>
-
-
-
-            <div class="open-government-licence">
-              <p class="logo"><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a></p>
-                <p>All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated</p>
-            </div>
-          </div>
-
-          <div class="copyright">
-            <a href="http://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/">© Crown copyright</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <div id="global-app-error" class="app-error hidden"></div>
-
-    <script src="../assets//govuk-template-c4f303154d2a238bdda4d5cf1ebd8d4487822e4cbc3e4c83e743da869443ce72.js"></script>
-
-      <script src="../assets/jquery-1.11.3-c40d54aaf7339842749de8469b5b8915b886b5e67cd218d48a780cc2f2471853.js"></script>
-<script src="../assets/header-footer-only-67c9fdb12cd069ce13482bbbf163a8b50f79d4c6ca75df83e5351559b96fa034.js"></script>
-<script src="../assets/surveys-f8a25c4f85ad5520f9ae61b244160bef62467f30ec1517dfe8bf7a0fc0a61e16.js"></script>
-
-
-
-    <script>if (typeof window.GOVUK === 'undefined') document.body.className = document.body.className.replace('js-enabled', '');</script>
-  <script src="../assets/application-33a7e0b6382eb3a79f04760bfc1fc54b920f068fa08b60294cf6f833e2d86d15.js"></script>
-</body>
-</html>
+{% include govuk-footer.html %}
