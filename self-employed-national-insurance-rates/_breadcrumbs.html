@@ -1,0 +1,23 @@
+<div class="govuk-breadcrumbs " data-module="track-click">
+  <ol>
+  {% if page.url == "/self-employed-national-insurance-rates/" }
+    <li class="">
+        <a data-track-category="breadcrumbClicked" data-track-action="1" data-track-label="/" data-track-options='{"dimension28":"3","dimension29":"Home"}' class="" aria-current="false" href="https://www.gov.uk/">Home</a>
+    </li>
+
+    <li class="">
+        <a data-track-category="breadcrumbClicked" data-track-action="2" data-track-label="/browse/tax" data-track-options='{"dimension28":"3","dimension29":"Money and tax"}' class="" aria-current="false" href="https://www.gov.uk/browse/tax">Money and tax</a>
+    </li>
+
+    <li class="">
+        <a data-track-category="breadcrumbClicked" data-track-action="3" data-track-label="/browse/tax/national-insurance" data-track-options='{"dimension28":"3","dimension29":"National Insurance"}' class="" aria-current="false" href="https://www.gov.uk/browse/tax/national-insurance">National Insurance</a>
+    </li>
+  {% else %}
+		<li>
+			← <a href="./">Go back to the latest version</a>
+		</li>
+  {% endif %}
+  </ol>
+</div>
+
+
