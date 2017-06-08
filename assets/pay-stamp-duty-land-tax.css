@@ -6,3 +6,8 @@
   border-left:1px solid #bfc1c3;
   padding-left:15px;
 }
+
+.date {
+  font-size: 19px;
+  font-weight: bold;
+}
