@@ -1,8 +1,16 @@
 <div class="grid-row">
   <div class="column-two-thirds">
     <div class="govuk-title length-long">
+      {% if page.version != 'current' %}
+      <a href="./">&larr; Go back to the latest version</a>
+      <p class="title-contrast">You're viewing an old version of</p>
+      {% endif %}
       <p class="context">Guidance</p>
       <h1>Pay Stamp Duty Land Tax</h1>
+      {{ page.latest_version }}
+      {% if page.version != 'current' %}
+      <p class="title-contrast">Published {{ include.published_date }}</p>
+      {% endif %}
     </div>
   </div>
   <div class="column-third">

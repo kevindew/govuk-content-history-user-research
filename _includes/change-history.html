@@ -11,7 +11,7 @@
   </div>
 
   <div class="related-information">
-    {% if include.version == 'current' %}
+    {% if page.version == 'current' %}
     <p class="current-version">
       <span class="secondary-text">You're viewing:</span>
       <br/>
@@ -21,7 +21,7 @@
     <span class="date">{{ include.data.current.updated | date: "%-d %B %Y" }}</span>
     <br/>
     {{ include.data.current.change_note }}
-    {% if include.version != 'current' %}
+    {% if page.version != 'current' %}
     <br/><a href="./">View current version</a>
     {% endif %}
     </span>
@@ -38,7 +38,7 @@
         <ol>
           {% for version in include.data.past %}
             {% if forloop.last %}{% continue %}{% endif %}
-            {% if include.version == version[0] %}
+            {% if page.version == version[0] %}
             <li class="current-version">
               <span class="secondary-text">You're viewing:</span><br/>
             {% else %}
@@ -48,10 +48,10 @@
             <time datetime="{{ version[1].published | date_to_xmlschema }}" class="timestamp">{{ version[1].published | date: "%-d %B %Y" }}</time>
               {{ version[1].change_note }}
               Credit card fees have changed.
-              {% unless include.version == version[0] and include.diff == false %}
+              {% unless page.version == version[0] and page.diff == false %}
               <br/><a href="{{ version[1].link }}">View this version</a>
               {% endunless %}
-              {% unless include.version == version[0] and include.diff == true %}
+              {% unless page.version == version[0] and page.diff == true %}
               <br/><a href="{{ version[1].diff_link }}">Compare this version to current version</a>
               {% endunless %}
             </li>
@@ -67,7 +67,7 @@
   </p>
 </div>
 <div class="related-information">
-  {% if include.version == 1 %}
+  {% if page.version == 1 %}
     <p class="current-version">
       <span class="secondary-text">You're viewing:</span><br/>
   {% else %}
@@ -75,7 +75,7 @@
   {% endif %}
     <span class="date">{{ include.data.past[1].published | date: "%-d %B %Y" }}</span><br/>
     {{ include.data.past[1].change_note }}
-    {% if include.version != 1 %}
+    {% if page.version != 1 %}
     <br/><a href="{{ include.data.past[1].link }}">View this version</a>
     {% endif %}
     <br/><a href="{{ include.data.past[1].diff_link }}">Compare this version to current version</a>

@@ -1,7 +1,11 @@
 ---
 layout: self-employed-national-insurance-rates
 title: Self-employed National Insurance rates
+version: current
 ---
+
+{% include_relative _breadcrumbs.html current=true %}
+
 <div class="grid-row sidebar-with-body">
   <div class="column-two-thirds">
     <div class="govuk-title length-average">
@@ -105,4 +109,4 @@ title: Self-employed National Insurance rates
 
 </div>
 
-{% include change-history.html data=site.data.self-employed-national-insurance-rates version='current' %}
+{% include change-history.html data=site.data.self-employed-national-insurance-rates %}

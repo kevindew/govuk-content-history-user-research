@@ -1,7 +1,11 @@
 ---
 layout: pay-stamp-duty-land-tax
 title: Pay Stamp Duty Land Tax
+version: current
 ---
+
+{% include_relative _breadcrumbs.html current=true %}
+
 {% include_relative _title.html %}
 
 {% include_relative _metadata.html %}
@@ -294,4 +298,4 @@ HM Revenue and Customs
   </div>
 </div>
 
-{% include change-history.html data=site.data.pay-stamp-duty-land-tax version='current' %}
+{% include change-history.html data=site.data.pay-stamp-duty-land-tax %}
