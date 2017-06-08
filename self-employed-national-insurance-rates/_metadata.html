@@ -1,10 +1,11 @@
 <div class="govuk-metadata direction-ltr" data-module="toggle">
   <dl>
     <dt>Published:</dt>
-    <dd>6 April 2015</dd>
+    <dd>{{ site.data.self-employed-national-insurance-rates.published | date: "%-d %B %Y" }}</dd>
     <dt>Last updated:</dt>
     <dd>
       6 April 2017
+      {{ site.data.self-employed-national-insurance-rates.current.updated | date: "%-d %B %Y" }}
         <a href="#history" data-module="track-click" data-track-category="content-history" data-track-action="see-all-updates-link-clicked" data-track-label="history">
           see all updates
         </a>
