@@ -15,16 +15,6 @@
     </div>
 
     <div class="related-information">
-<<<<<<< HEAD
-        {% if include.version == 4 %}
-        <p class="current-version">
-          <span class="time-stamp">You're viewing:</span>
-        {% else %}
-        <p>
-        {% endif %}
-        <br/>
-        <strong>27 July 2016</strong>
-=======
       {% if include.version == 4 %}
       <p class="current-version">
         <span class="time-stamp">You're viewing:</span>
@@ -33,10 +23,11 @@
       {% endif %}
       <br/>
       <span class="date">27 July 2016</span>
->>>>>>> 688d34b... squash
       <br/>
-        Section about paying by cheque through the post has been updated.
-        <br/><a href="./">View current version</a>
+      Section about paying by cheque through the post has been updated.
+      {% if include.version != 4 %}
+      <br/><a href="./">View current version</a>
+      {% endif %}
       </span>
       </p>
       <div class="change-notes" data-module="toggle">
