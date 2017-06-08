@@ -1,6 +1,6 @@
 <div class="govuk-breadcrumbs " data-module="track-click">
   <ol>
-  {% if page.url == "/self-employed-national-insurance-rates/" }
+	{% if include.current == true %}
     <li class="">
         <a data-track-category="breadcrumbClicked" data-track-action="1" data-track-label="/" data-track-options='{"dimension28":"3","dimension29":"Home"}' class="" aria-current="false" href="https://www.gov.uk/">Home</a>
     </li>
