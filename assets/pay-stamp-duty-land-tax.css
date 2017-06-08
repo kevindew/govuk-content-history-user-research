@@ -1,3 +1,8 @@
 .time-stamp {
-  color: #6f777b  
+  color: #6f777b
+}
+
+.current-version {
+  border-left:1px solid #bfc1c3;
+  padding-left:15px;
 }
