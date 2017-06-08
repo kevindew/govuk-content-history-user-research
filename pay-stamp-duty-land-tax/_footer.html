@@ -40,25 +40,46 @@
         <div class="js-hidden" id="full-history" aria-live="polite" role="region">
           <span class="arrow"></span>
           <ol>
+            {% if include.version == 3 %}
+            <li class="current-version">
+              <span class="time-stamp">You're viewing:</span><br/>
+            {% else %}
             <li>
+            {% endif %}
               <span class="date"><time datetime="2016-04-01T08:00:06.000+01:00">1 April 2016</time></span><br/>
               Credit card fees have changed.
+              {% if include.version != 3 %}
               <br/><a href="./v3.2.html">View this version</a>
+              {% endif %}
               <br/><a href="./v3.2-diff.html">Compare this version to current version</a>
             </li>
             <br>
+            {% if include.version == 2 %}
+            <li class="current-version">
+              <span class="time-stamp">You're viewing:</span><br/>
+            {% else %}
             <li>
-              <span class="date"><time datetime="2016-02-29T09:30:12.000+00:00" class="timestamp">29 February 2016</time></span
+            {% endif %}
+              <span class="date"><time datetime="2016-02-29T09:30:12.000+00:00" class="timestamp">29 February 2016</time></span>
               Overseas payment details changed.
+              {% if include.version != 2 %}
               <br/><a href="./v2.0.html">View this version</a>
+              {% endif %}
               <br/><a href="./v2.0-diff.html">Compare this version to current version</a>
             </li>
           </ol>
         </div>
-      <p>
+        {% if include.version == 1 %}
+        <p class="current-version">
+          <span class="time-stamp">You're viewing:</span><br/>
+        {% else %}
+        <p>
+        {% endif %}
         <span class="date">2 December 2015</span><br/>
         First published.
+        {% if include.version != 1 %}
         <br/><a href="./view-version-1.html">View this version</a>
+        {% endif %}
         <br/><a href="./v1.10-diff.html">Compare this version to current version</a>
       </p>
     </div>
