@@ -2,12 +2,13 @@
 layout: pay-stamp-duty-land-tax
 title: Pay Stamp Duty Land Tax
 version: 3
-published_date: 1 April 2016
 ---
 
 {% include_relative _breadcrumbs.html %}
 
-{% include_relative _title.html %}
+{% assign published_date=site.data.pay-stamp-duty-land-tax.past[3].published %}
+
+{% include_relative _title.html published_date=published_date %}
 
 {% include_relative _metadata.html %}
 
