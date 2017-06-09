@@ -59,13 +59,13 @@
               {% if page.diff %}{% assign not_diff = false %}{% else %}{% assign not_diff = true %}{% endif %}
               {% if include.data.show_old_versions %}
                 {% unless page.version == version[0] and not_diff %}
-                <br/><a href="{{ version[1].link }}">View the {{ version[1].published | date: "%-d %B %Y" }} version</a>
+                <br/><a href="{{ version[1].link }}">See how the page looked when this change was made</a>.
                 {% endunless %}
               {% endif %}
 
               {% if include.data.show_diffs %}
                 {% unless page.version == version[0] and page.diff %}
-                <br/><a href="{{ version[1].diff_link }}">Compare with the most up-to-date version</a> - see everything that's changed on this page since {{ version[1].published | date: "%-d %B %Y" }}
+                <br/><a href="{{ version[1].diff_link }}">Compare with the most up-to-date version</a> - see everything that's changed since {{ version[1].published | date: "%-d %B %Y" }}.
                 {% endunless %}
               {% endif %}
             </li>
@@ -96,12 +96,12 @@
     {% if page.diff %}{% assign not_diff = false %}{% else %}{% assign not_diff = true %}{% endif %}
     {% if include.data.show_old_versions %}
       {% unless page.version == 1 and not_diff %}
-        <br/><a href="{{ include.data.past[1].link }}">See how this page looked when it was first published</a>
+        <br/><a href="{{ include.data.past[1].link }}">See how this page looked when it was first published</a>.
       {% endunless %}
     {% endif %}
     {% if include.data.show_diffs %}
       {% unless page.version == 1 and page.diff %}
-      <br/><a href="{{ include.data.past[1].diff_link }}">See everything that’s changed on this page since it was first published</a>
+      <br/><a href="{{ include.data.past[1].diff_link }}">See everything that’s changed on this page since it was first published</a>.
       {% endunless %}
     {% endif %}
   </p>
