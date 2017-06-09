@@ -7,7 +7,9 @@ diff: true
 
 {% include_relative _breadcrumbs.html %}
 
-{% include_relative _title.html %}
+{% assign published_date=site.data.rates-and-thresholds-for-employers-2017-to-2018.past[2].published %}
+
+{% include_relative _title.html published_date=published_date %}
 
 {% include_relative _metadata.html %}
 

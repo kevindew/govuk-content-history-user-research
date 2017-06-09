@@ -1,10 +1,8 @@
-<div class="grid-row">
+<div class="grid-row sidebar-with-body">
   <div class="column-two-thirds">
-    <div class="govuk-title length-long">
+    <div class="govuk-title length-average">
       {% if page.version != 'current' %}
       <p class="title-contrast">You're viewing an old version of</p>
-      {% else %}
-      <p class="context">Guidance</p>
       {% endif %}
       <h1>{{ page.title }}</h1>
       {% if page.version != 'current' %}
@@ -17,7 +15,3 @@
       </p>
       {% endif %}
     </div>
-  </div>
-  <div class="column-third">
-  </div>
-</div>
