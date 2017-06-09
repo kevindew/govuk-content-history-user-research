@@ -8,9 +8,9 @@
       {% if page.version != 'current' %}
       <p class="title-contrast">
         {% if page.diff %}
-        It shows everything that's changed between {{ page.published_date }} and now.
+        It shows everything that's changed between {{ include.published_date | date: '%-d %B %Y' }} and now.
         {% else %}
-        Published {{ page.published_date }}
+        Published {{ include.published_date | date: '%-d %B %Y' }}
         {% endif %}
       </p>
       {% endif %}
