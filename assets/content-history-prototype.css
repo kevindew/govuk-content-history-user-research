@@ -16,3 +16,15 @@
   font-size: 36px;
   color: #6f777b;
 }
+
+.govuk-breadcrumbs li.latest-version, .govuk-breadcrumbs li.latest-version a {
+  color: #005ea5;
+}
+
+.diff-new, .diff-chg {
+  background-color: rgb(180, 255, 180);
+}
+
+.diff-old {
+  background-color: rgb(255, 130, 130);
+}
