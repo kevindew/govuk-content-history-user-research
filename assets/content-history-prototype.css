@@ -22,9 +22,11 @@
 }
 
 .diff-new, .diff-chg {
-  background-color: rgb(180, 255, 180);
+  background-color: #a6f3a6;
+  text-decoration: inherit;
 }
 
 .diff-old {
-  background-color: rgb(255, 130, 130);
+  background-color: #f8cbcb;
+  color: #cb2431;
 }
