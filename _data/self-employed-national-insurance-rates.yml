@@ -1,0 +1,27 @@
+show_old_versions: true
+show_diffs: true
+published: 2015-04-06
+current:
+  updated: 2017-04-06
+  change_note: |
+    Updated Class 2 and Class 4 profit threshold for 2017-18 tax year; updated Class 2 and Class 4 weekly rates for 2017-18 tax year.
+  link: ./
+past:
+  3:
+    published: 2016-04-06
+    change_note: |
+      Updated Class 4 bands for 2016-17 tax year: 9% band is now £8,060-43,000; 2% band is now £43,000+
+    link: ./v3.0.html
+    diff_link: ./v3.0-diff.html
+  2:
+    published: 2015-05-28
+    change_note: |
+      Added self-assessment exceptions: exams professions, land and property businesses, ministers of religion, investors.
+    link: ./v2.0.html
+    diff_link: ./v2.0-diff.html
+  1:
+    published: 2015-04-06
+    change_note: |
+      First Published.
+    link: ./v1.0.html
+    diff_link: ./v1.0-diff.html

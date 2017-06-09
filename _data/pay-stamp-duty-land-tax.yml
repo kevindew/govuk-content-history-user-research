@@ -1,0 +1,27 @@
+show_old_versions: true
+show_diffs: true
+published: 2015-12-02
+current:
+  updated: 2016-07-27
+  change_note: |
+    Section about paying by cheque through the post has been updated.
+  link: ./
+past:
+  3:
+    published: 2016-04-01
+    change_note: |
+      Credit card fees have changed.
+    link: ./v3.0.html
+    diff_link: ./v3.0-diff.html
+  2:
+    published: 2016-02-29
+    change_note: |
+      Overseas payment details changed.
+    link: ./v2.0.html
+    diff_link: ./v2.0-diff.html
+  1:
+    published: 2015-12-02
+    change_note: |
+      First Published.
+    link: ./v1.0.html
+    diff_link: ./v1.0-diff.html

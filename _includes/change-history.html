@@ -1,0 +1,83 @@
+
+<div class="govuk-document-footer direction-ltr">
+  <h2 class="visuallyhidden">
+    Document information
+  </h2>
+
+  <div class="history-information" id="history">
+    <p>
+      Last updated:
+    </p>
+  </div>
+
+  <div class="related-information">
+    {% if page.version == 'current' %}
+    <p class="current-version">
+      <span class="secondary-text">You're viewing:</span>
+      <br/>
+    {% else %}
+    <p>
+    {% endif %}
+    <span class="date">{{ include.data.current.updated | date: "%-d %B %Y" }}</span>
+    <br/>
+    {{ include.data.current.change_note }}
+    {% if page.version != 'current' %}
+    <br/><a href="./">View current version</a>
+    {% endif %}
+    </span>
+    </p>
+    <div class="change-notes" data-module="toggle">
+      <p>
+        <a href="#full-history" data-controls="full-history" data-expanded="false" data-module="track-click" data-track-category="content-history" data-track-action="full-page-history-toggled" data-track-label="full-history" role="button" aria-controls="full-history" aria-expanded="false">
+          + see all updates
+        </a>
+      </p>
+
+      <div class="js-hidden" id="full-history" aria-live="polite" role="region">
+        <span class="arrow"></span>
+        <ol>
+          {% for version in include.data.past %}
+            {% if forloop.last %}{% continue %}{% endif %}
+            {% if page.version == version[0] %}
+            <li class="current-version">
+              <span class="secondary-text">You're viewing:</span><br/>
+            {% else %}
+            <li>
+            {% endif %}
+
+            <time datetime="{{ version[1].published | date_to_xmlschema }}" class="timestamp">{{ version[1].published | date: "%-d %B %Y" }}</time>
+              {{ version[1].change_note }}
+              Credit card fees have changed.
+              {% unless page.version == version[0] and page.diff == false %}
+              <br/><a href="{{ version[1].link }}">View this version</a>
+              {% endunless %}
+              {% unless page.version == version[0] and page.diff == true %}
+              <br/><a href="{{ version[1].diff_link }}">Compare this version to current version</a>
+              {% endunless %}
+            </li>
+          {% endfor %}
+          </li>
+        </ol>
+      </div>
+  </div>
+</div>
+<div class="history-information" id="history">
+  <p>
+    Published:
+  </p>
+</div>
+<div class="related-information">
+  {% if page.version == 1 %}
+    <p class="current-version">
+      <span class="secondary-text">You're viewing:</span><br/>
+  {% else %}
+    <p>
+  {% endif %}
+    <span class="date">{{ include.data.past[1].published | date: "%-d %B %Y" }}</span><br/>
+    {{ include.data.past[1].change_note }}
+    {% if page.version != 1 %}
+    <br/><a href="{{ include.data.past[1].link }}">View this version</a>
+    {% endif %}
+    <br/><a href="{{ include.data.past[1].diff_link }}">Compare this version to current version</a>
+  </p>
+</div>
