@@ -1,0 +1,21 @@
+show_old_versions: true
+show_diffs: true
+published: 2017-02-09
+current:
+  updated: 2017-05-30
+  change_note: |
+    "Company cars: Advisory Fuel Rates (AFRs) have been updated."
+  link: ./
+past:
+  2:
+    published: 2017-02-24
+    change_note: |
+      Scottish Income Tax rates & thresholds have been updated following ratification by the Scottish Parliament.
+    link: ./v2.html
+    diff_link: ./v2-diff.html
+  1:
+    published: 2017-02-09
+    change_note: |
+      First Published.
+    link: ./v1.html
+    diff_link: ./v1-diff.html
