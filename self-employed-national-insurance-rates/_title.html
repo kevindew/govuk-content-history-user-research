@@ -1,0 +1,17 @@
+<div class="grid-row sidebar-with-body">
+  <div class="column-two-thirds">
+    <div class="govuk-title length-average">
+      {% if page.version != 'current' %}
+      <p class="title-contrast">You're viewing an old version of</p>
+      {% endif %}
+      <h1>{{ page.title }}</h1>
+      {% if page.version != 'current' %}
+      <p class="title-contrast">
+        {% if page.diff %}
+        It shows everything that's changed between {{ page.published_date }} and now.
+        {% else %}
+        Published {{ page.published_date }}
+        {% endif %}
+      </p>
+      {% endif %}
+    </div>
