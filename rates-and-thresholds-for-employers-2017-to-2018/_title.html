@@ -1,8 +1,14 @@
 <div class="grid-row">
   <div class="column-two-thirds">
     <div class="govuk-title length-long">
+      {% if page.version != 'current' %}
+      <p class="title-contrast">You're viewing an old version of</p>
+      {% endif %}
       <p class="context">Guidance</p>
-      <h1>Rates and thresholds for employers 2017 to 2018</h1>
+      <h1>{{ page.title }}</h1>
+      {% if page.version != 'current' %}
+      <p class="title-contrast">Published {{ page.published_date }}</p>
+      {% endif %}
     </div>
   </div>
   <div class="column-third">
