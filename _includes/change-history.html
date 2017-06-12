@@ -53,7 +53,7 @@
             <li>
             {% endif %}
 
-            <time datetime="{{ version[1].published | date_to_xmlschema }}" class="timestamp">{{ version[1].published | date: "%-d %B %Y" }}</time>
+            <time datetime="{{ version[1].published | date_to_xmlschema }}" class="date timestamp">{{ version[1].published | date: "%-d %B %Y" }}</time>
               {{ version[1].change_note }}
               Credit card fees have changed.
               {% if page.diff %}{% assign not_diff = false %}{% else %}{% assign not_diff = true %}{% endif %}
