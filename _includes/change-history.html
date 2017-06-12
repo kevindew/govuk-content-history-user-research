@@ -54,17 +54,17 @@
             {% endif %}
 
             <time datetime="{{ version[1].published | date_to_xmlschema }}" class="date timestamp">{{ version[1].published | date: "%-d %B %Y" }}</time>
-              {{ version[1].change_note }}
+              <p style="margin-bottom: 8px">{{ version[1].change_note }}</p>
               {% if page.diff %}{% assign not_diff = false %}{% else %}{% assign not_diff = true %}{% endif %}
               {% if include.data.show_old_versions %}
                 {% unless page.version == version[0] and not_diff %}
-                <br/><a href="{{ version[1].link }}">See how the page looked when this change was made</a>.
+                <a href="{{ version[1].link }}">See how the page looked when this change was made</a>.<br/>
                 {% endunless %}
               {% endif %}
 
               {% if include.data.show_diffs %}
                 {% unless page.version == version[0] and page.diff %}
-                <br/><a href="{{ version[1].diff_link }}">Compare with the most up-to-date version</a> - see everything that's changed since {{ version[1].published | date: "%-d %B %Y" }}.
+                <a href="{{ version[1].diff_link }}">Compare with the most up-to-date version</a> - see everything that's changed since {{ version[1].published | date: "%-d %B %Y" }}.<br/>
                 {% endunless %}
               {% endif %}
             </li>
@@ -91,16 +91,16 @@
     <p>
   {% endif %}
     <span class="date">{{ include.data.past[1].published | date: "%-d %B %Y" }}</span><br/>
-    {{ include.data.past[1].change_note }}
+    <span style="display: inline-block; margin-bottom: 8px">{{ include.data.past[1].change_note }}</span><br />
     {% if page.diff %}{% assign not_diff = false %}{% else %}{% assign not_diff = true %}{% endif %}
     {% if include.data.show_old_versions %}
       {% unless page.version == 1 and not_diff %}
-        <br/><a href="{{ include.data.past[1].link }}">See how this page looked when it was first published</a>.
+        <a href="{{ include.data.past[1].link }}">See how this page looked when it was first published</a>.<br/>
       {% endunless %}
     {% endif %}
     {% if include.data.show_diffs %}
       {% unless page.version == 1 and page.diff %}
-      <br/><a href="{{ include.data.past[1].diff_link }}">See everything that’s changed on this page since it was first published</a>.
+      <a href="{{ include.data.past[1].diff_link }}">See everything that’s changed on this page since it was first published</a>.<br/>
       {% endunless %}
     {% endif %}
   </p>
