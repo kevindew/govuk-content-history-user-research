@@ -27,17 +27,7 @@
     </span>
     </p>
     <div class="change-notes" data-module="toggle">
-      <p>
-      <a href="#full-history" data-controls="full-history" data-expanded="{% if showing_current %}false{% else %}true{% endif %}" data-module="track-click" data-track-category="content-history" data-track-action="full-page-history-toggled" data-track-label="full-history" role="button" aria-controls="full-history" aria-expanded="{% if showing_current %}false{% else %}true{% endif %}">
-          {% if showing_current %}
-          + see all updates
-          {% else %}
-          - hide all updates
-          {% endif %}
-        </a>
-      </p>
-
-      <div class="{% if showing_current %}js-hidden{% endif %}" id="full-history" aria-live="polite" role="region">
+      <div id="full-history" aria-live="polite" role="region">
         <span class="arrow"></span>
         <ol>
           {% for version in include.data.past %}
@@ -65,30 +55,31 @@
           </li>
         </ol>
       </div>
+    </div>
   </div>
-</div>
-<div class="history-information" id="history">
-  <p>
-    Published:
-  </p>
-</div>
-<div class="related-information">
-  {% if page.version == 1 %}
-    <p class="current-version">
-      {% if page.diff %}
-      <span class="secondary-text">You're comparing:</span><br/>
-      {% else %}
-      <span class="secondary-text">You're viewing:</span><br/>
-      {% endif %}
-  {% else %}
+  <div class="history-information" id="history">
     <p>
-  {% endif %}
-    <span class="date">{{ include.data.past[1].published | date: "%-d %B %Y" }}</span><br/>
-    <span style="display: inline-block; margin-bottom: 8px">{{ include.data.past[1].change_note }}</span><br />
-    {% if include.data.show_diffs %}
-      {% unless page.version == 1 and page.diff %}
-      <a href="{{ include.data.past[1].diff_link }}">See everything that’s changed on this page since it was first published</a>.<br/>
-      {% endunless %}
+      Published:
+    </p>
+  </div>
+  <div class="related-information">
+    {% if page.version == 1 %}
+      <p class="current-version">
+        {% if page.diff %}
+        <span class="secondary-text">You're comparing:</span><br/>
+        {% else %}
+        <span class="secondary-text">You're viewing:</span><br/>
+        {% endif %}
+    {% else %}
+      <p>
     {% endif %}
-  </p>
+      <span class="date">{{ include.data.past[1].published | date: "%-d %B %Y" }}</span><br/>
+      <span style="display: inline-block; margin-bottom: 8px">{{ include.data.past[1].change_note }}</span><br />
+      {% if include.data.show_diffs %}
+        {% unless page.version == 1 and page.diff %}
+        <a href="{{ include.data.past[1].diff_link }}">See everything that’s changed on this page since it was first published</a>.<br/>
+        {% endunless %}
+      {% endif %}
+    </p>
+  </div>
 </div>
