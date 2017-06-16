@@ -1,0 +1,58 @@
+<div class="grid-row compare-form">
+  <div class="column-one-half">
+    <div class="form-group">
+      <label class="form-label" for="compare-from">Comparing</label>
+      <select class="form-control compare-select" id="compare-from" name="select-box">
+        <option value="v4">v4 - {{ site.data.pay-stamp-duty-land-tax.current.updated | date: "%-d %b %Y %I:%M%P" }}</option>
+        <option value="v3">v3 - {{ site.data.pay-stamp-duty-land-tax.past[3].published | date: "%-d %b %Y %I:%M%P" }}</option>
+        <option value="v2">v2 - {{ site.data.pay-stamp-duty-land-tax.past[2].published | date: "%-d %b %Y %I:%M%P" }}</option>
+        <option value="v1">v1 - {{ site.data.pay-stamp-duty-land-tax.past[1].published | date: "%-d %b %Y %I:%M%P" }}</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="column-one-half">
+    <div class="form-group">
+      <label class="form-label" for="compare-to">With</label>
+      <select class="form-control compare-select" id="compare-to" name="select-box">
+        <option value="v4">v4 - {{ site.data.pay-stamp-duty-land-tax.current.updated | date: "%-d %b %Y %I:%M%P" }}</option>
+        <option value="v3">v3 - {{ site.data.pay-stamp-duty-land-tax.past[3].published | date: "%-d %b %Y %I:%M%P" }}</option>
+        <option value="v2">v2 - {{ site.data.pay-stamp-duty-land-tax.past[2].published | date: "%-d %b %Y %I:%M%P" }}</option>
+        <option value="v1">v1 - {{ site.data.pay-stamp-duty-land-tax.past[1].published | date: "%-d %b %Y %I:%M%P" }}</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<script>
+  var currentCompareFrom = "{{ include.from }}";
+  var currentCompareTo = "{{ include.to }}";
+
+  var $compareTo = $("#compare-to");
+  var $compareFrom = $("#compare-from");
+
+  $compareTo.val(currentCompareTo);
+  $compareFrom.val(currentCompareFrom);
+
+  var change = function() {
+    if (currentCompareFrom != currentCompareTo) {
+      document.location = currentCompareFrom + "-" + currentCompareTo + ".html";
+    }
+  };
+
+  $compareTo.change(function() {
+    currentCompareTo = $compareTo.val();
+    change();
+  });
+
+  $compareFrom.change(function() {
+    currentCompareFrom = $compareFrom.val();
+    change();
+  });
+</script>
+
+<div style="display: none">
+<h2 class="heading-large">Details</h2>
+</div>
+
+<br />
