@@ -17,15 +17,15 @@
         <dt>Last updated:</dt>
         <dd>
           {{ site.data.pay-stamp-duty-land-tax.current.updated | date: "%-d %B %Y" }}
+          {% if include.historical == true %}
+            <a href="choose.html" data-module="track-click" data-track-category="content-history" data-track-action="view-history-link-clicked" data-track-label="history">
+              view detailed history
+            </a>
+          {% else %}
             <a href="#history" data-module="track-click" data-track-category="content-history" data-track-action="see-all-updates-link-clicked" data-track-label="history">
               see all updates
             </a>
-
-            &middot;
-
-            <a href="../historical-frontend" data-module="track-click" data-track-category="content-history" data-track-action="view-history-link-clicked" data-track-label="history">
-              view detailed history
-            </a>
+          {% endif %}
         </dd>
       </dl>
     </div>
