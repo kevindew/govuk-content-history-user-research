@@ -1,3 +1,27 @@
+<details>
+
+  <summary><span class="summary">Help comparing content</span></summary>
+
+  <div class="panel panel-border-narrow">
+
+    <p>
+      This view shows the differences between 2 versions of a piece of content.
+      You can adjust either version to change which versions of the content
+      you are comparing.
+    </p><br />
+
+    <p>
+      The content that is compared is the underlying data that is used to show
+      the page on GOV.UK. The data here is in <a href="http://yaml.org/">YAML</a>
+      format and contains <a href="https://en.wikipedia.org/wiki/HTML">HTML</a>.
+    </p><br />
+
+    <p>
+      We provide this information to provide transparency into how GOV.UK is
+      updated as part of our commitment to <a href="https://en.wikipedia.org/wiki/Open_Government_Partnership">Open Government Partnership</a>
+    </p>
+  </div>
+</details>
 
 <div class="compare" id="compare">
   <div class="title" style="text-align: center">
@@ -7,7 +31,8 @@
     <div class="column-one-half">
       <div class="compare-version">
         {% include_relative _compare-version.html current=include.from other=include.to left=true %}
-        {% if include.from > 1 and (include.from | plus: 1) == include.to %}
+        {% assign from_plus_1 = include.from | plus: 1 %}
+        {% if include.from > 1 and from_plus_1 == include.to %}
           <a href="v{{ include.from | minus: 1 }}-v{{ include.to | minus: 1 }}.html#compare">&larr; Previous Edit</a>
         {% endif %}
       </div>
@@ -16,7 +41,8 @@
     <div class="column-one-half">
       <div class="compare-version">
         {% include_relative _compare-version.html current=include.to other=include.from %}
-        {% if include.to < 4 and (include.to | minus: 1) == include.from %}
+        {% assign to_minus_1 = include.to | minus: 1 %}
+        {% if include.to < 4 and to_minus_1 == include.from %}
           <a href="v{{ include.from | plus: 1 }}-v{{ include.to | plus: 1}}.html#compare">Next Edit &rarr;</a>
         {% endif %}
       </div>
