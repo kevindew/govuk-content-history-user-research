@@ -1,0 +1,40 @@
+{% assign versions = site.data.pay-stamp-duty-land-tax.versions %}
+{% assign date_format = "%-d %b %Y" %}
+
+<h3 class="heading-small">Version {{ include.current }} - Published: {{ versions[include.current].published | date: date_format }}</h3>
+<div class="compare-choose-wrapper">
+  <a href="#" class="compare-choose">
+      <span class="text">Change</span>
+      <span class="icon">&#9660;</span>
+  </a>
+  <div class="compare-choices">
+    <ul>
+      {% for version in versions %}
+        {% capture url %}
+          {% if include.left %}
+          v{{ version[0] }}-v{{ include.other }}.html#compare
+          {% else %}
+          v{{ include.other }}-v{{ version[0] }}.html#compare
+          {% endif %}
+        {% endcapture %}
+      <li>
+        {% if version[0] == include.current %}
+          <a href="{{ url }}" class="choice selected">
+        {% elsif version[0] == include.other %}
+          <span class="choice disabled" title="Cannot compare to same version">
+        {% else %}
+          <a href="{{ url }}" class="choice">
+        {% endif %}
+          <span class="title">Version {{ version[0] }} - Published: {{ version[1].published | date: date_format }}</span>
+          <span class="change-note">{{ version[1].change_note }}</span>
+        {% if version[0] == include.other %}
+          </span>
+        {% else %}
+          </a>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+<p class="change-note">{{ versions[include.current].change_note }}</p>

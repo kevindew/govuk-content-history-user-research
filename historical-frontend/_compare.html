@@ -1,0 +1,40 @@
+
+<div class="compare" id="compare">
+  <div class="title" style="text-align: center">
+    <h2 class="heading-medium">Comparing</h2>
+  </div>
+  <div class="grid-row">
+    <div class="column-one-half">
+      <div class="compare-version">
+        {% include_relative _compare-version.html current=include.from other=include.to left=true %}
+      </div>
+    </div>
+
+    <div class="column-one-half">
+      <div class="compare-version">
+        {% include_relative _compare-version.html current=include.to other=include.from %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+$(".compare-choose").on("click", function() {
+  var $compareChoices = $(this).parent().find(".compare-choices")
+
+  if ($compareChoices.hasClass("open")) {
+    $compareChoices.removeClass("open");
+  } else {
+    $compareChoices.addClass("open");
+  }
+  return false;
+});
+
+$(".choice.selected").on("click", function() {
+  $(this).closest(".compare-choices").removeClass("open");
+  return false;
+});
+$(".choice.disabled").on("click", function() {
+  alert($(this).attr("title"));
+});
+</script>

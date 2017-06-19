@@ -25,3 +25,20 @@ past:
       First Published.
     link: ./v1.html
     diff_link: ./v1-diff.html
+versions:
+  1:
+    published: 2015-12-02
+    change_note: |
+      First Published.
+  2:
+    published: 2016-02-29
+    change_note: |
+      Overseas payment details changed.
+  3:
+    published: 2016-04-01
+    change_note: |
+      Credit card fees have changed.
+  4:
+    published: 2016-07-27
+    change_note: |
+      Section about paying by cheque through the post has been updated.
