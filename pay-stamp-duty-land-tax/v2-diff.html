@@ -7,7 +7,7 @@ diff: true
 
 {% include _stampduty_breadcrumbs.html %}
 
-{% assign published_date=site.data.pay-stamp-duty-land-tax.past[2].published %}
+{% assign published_date=site.data.pay-stamp-duty-land-tax.past[1].published %}
 
 {% include _stampduty_title.html published_date=published_date %}
 
@@ -16,7 +16,6 @@ diff: true
 <p class="description">
   Find out how to pay your Stamp Duty Land Tax (SDLT) and the time it takes for payments to reach HM Revenue and Customs (HMRC).
 </p>
-
 <div class="grid-row sidebar-with-body" data-module="sticky-element-container" id="contents">
   <div class="column-third">
     <nav role="navigation">
@@ -681,15 +680,21 @@ diff: true
         <tbody>
           <tr>
             <td>
-              GB03
-              BARC
-              2011
-              4783
-              9776
-              92
+              <del class="diff-old">GB05CITI08321012001020
+              </del>
+              <ins class="diff-chg">GB03
+                BARC
+                2011
+                4783
+                9776
+                92
+              </ins>
             </td>
             <td>
-              BARCGB22
+              <del class="diff-old">CITIGB2L
+              </del>
+              <ins class="diff-chg">BARCGB22
+              </ins>
             </td>
             <td>
               <abbr title="HM Revenue and Customs">
@@ -721,21 +726,35 @@ diff: true
       <div class="address">
         <div class="adr org fn">
           <p>
-            Barclays
-            Bank
-            Plc
+            <del class="diff-old">Citibank
+              N
+              A
+              Citigroup
+              Centre
+              Canary
+              Wharf
+              33
+            </del>
+            <ins class="diff-chg">Barclays
+              Bank
+              Plc
+            </ins>
             <br>
-            1
-            Churchill
-            Place
+            <del class="diff-old">Canada
+              Square
+            </del>
+            <ins class="diff-chg">1
+              Churchill
+              Place
+            </ins>
             <br>
             London
             <br>
-            United
-            Kingdom
-            <br>
+            <ins class="diff-new">United
+              Kingdom
+            </ins><br>
             E14
-            <del class="diff-old">5HO
+            <del class="diff-old">5LB
             </del>
             <ins class="diff-chg">5HP
             </ins>
@@ -760,49 +779,38 @@ diff: true
         </a>.
       </p>
       <p>
-        <del class="diff-old">You’ll
-          pay
-        </del>
-        <ins class="diff-chg">There
-          is
-        </ins>
+        You’ll
+        pay
         a
-        <del class="diff-old">1.5%
-        </del>
+        1.5%
         fee
-        <del class="diff-old">if
-          you
-          use
-          a
-        </del>
-        <ins class="diff-chg">for
-        </ins>
+        if
+        you
+        use
+        a
         credit
-        <del class="diff-old">card.
-          The
-          fee
-          isn’t
-          refundable.
-          You
-          may
-          be
-          directed
-          to
-          use
-          a
-          beta
-          service
-          when
-          you
-          pay
-          online.
-          This
-          is
-          replacing
-          BillPay.
-        </del>
-        <ins class="diff-chg">cards.
-        </ins>
+        card.
+        The
+        fee
+        isn’t
+        refundable.
+        You
+        may
+        be
+        directed
+        to
+        use
+        a
+        beta
+        service
+        when
+        you
+        pay
+        online.
+        This
+        is
+        replacing
+        BillPay.
       </p>
       <p>
         From
@@ -905,11 +913,7 @@ diff: true
         customer
         attempting
         to
-        <del class="diff-old">circumvent
-        </del>
-        <ins class="diff-chg">get
-          around
-        </ins>
+        circumvent
         this
         restriction.
       </p>
@@ -1157,62 +1161,14 @@ diff: true
         You
         can
         pay
-        <ins class="diff-new">up
-          to
-          £10,000
-        </ins>
         at
         the
         Post
         Office
-        <del class="diff-old">by
-          cheque,
-        </del>
-        <ins class="diff-chg">without
-          being
-          charged
-          using:
-            </ins></p><ul><li><ins class="diff-chg">
-            cheque
-            (if
-            accepted)
-          </ins></li><li>
-          cash
-          <del class="diff-old">or
-          </del>
-        </li>
-        <li>
-          debit
-          card
-          <del class="diff-old">without
-            charge
-            (subject
-          </del>
-        </li>
-      </ul>
-      <p>
-        <a rel="external" href="http://www.postoffice.co.uk/branch-finder">
-          <ins class="diff-chg">Contact
-            your
-            local
-            Post
-            Office
-            branch
-        </ins></a>
-        to
-        <del class="diff-old">a
-          maximum
-          of
-          £10,000).
-        </del>
-        <ins class="diff-chg">check
-          if
-          you
-          can
-          pay
-          by
-          cheque.
-        </ins>
+        by
+        cheque,
+        cash or debit card without charge (subject
+        maximum of £10,000).
       </p>
       <p>
         Make
@@ -1427,41 +1383,25 @@ diff: true
         a
         paper
         return
-        <del class="diff-old">or
-          if
-          you
-          used
-          HMRC
-          ’s
-          Stamp
-          Duty
-          Online
-          product
-          or
-          commercial
-          software
-          which
-          generates
-          your
-          UTRN
-        </del>
-        <ins class="diff-chg">and
-          wish
-          to
-          pay
-          by
-          cheque
-          at
-          the
-          same
-          time,
-          please
-        </ins>
+        or
+        if
+        you
+        used
+        HMRC
+        ’s
+        Stamp
+        Duty
+        Online
+        product
+        or
+        commercial
+        software
+        which
+        generates
+        your
+        UTRN
         send
         your
-        <ins class="diff-new">return
-          and
-        </ins>
         payment
         to:
       </p>
@@ -1492,72 +1432,45 @@ diff: true
       </div>
       <p>
         If
-        <del class="diff-old">you’re
-          using
-          the
-          DX
-          service
-          send
-          to:
-          HMRC
-          SDLT
-          Rapid
-          Data
-          Capture
-          Centre
-          DX725593
-          Bootle
-          9
-          If
-          you
-          use
-          commercial
-          software
-          that
-          asks
-        </del>
+        you’re
+        using
+        the
+        DX
+        service
+        send
+        to:
+        HMRC
+        SDLT
+        Rapid
+        Data
+        Capture
+        Centre
+        DX725593
+        Bootle
+        9
+        If
         you
-        <ins class="diff-new">filed
-          electronically
-          but
-          choose
-        </ins>
+        use
+        commercial
+        software
+        that
+        asks
+        you
         to
-        <del class="diff-old">use
-          the
-          UTRN
-          from
-          your
-          SDLT
-          payslip
-          book
-          then
-        </del>
-        <ins class="diff-chg">pay
-          by
-          cheque,
-          please
-        </ins>
+        use
+        the
+        UTRN
+        from
+        your
+        SDLT
+        payslip
+        book
+        then
         send
         your
-        <ins class="diff-new">payment,
-          enclosing
-          a
-        </ins>
         payslip
-        <del class="diff-old">and
-          cheque
-        </del>
-        <ins class="diff-chg">or
-          quoting
-          a
-            </ins><abbr title="Unique Transaction Reference Number"><ins class="diff-chg">
-            UTRN
-          </ins></abbr><ins class="diff-chg">
-          to
-          avoid
-          delay
-        </ins>
+        and
+        cheque
         to:
       </p>
       <div class="address">
@@ -1656,4 +1569,4 @@ diff: true
   </div>
 </div>
 
-{% include change-history-latest-diff.html data=site.data.pay-stamp-duty-land-tax %}
+{% include change-history-previous-diff.html data=site.data.pay-stamp-duty-land-tax %}
