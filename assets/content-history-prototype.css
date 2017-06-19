@@ -17,6 +17,10 @@
   color: #6f777b;
 }
 
+.history-colour {
+  color: rgb(200, 0, 0);
+}
+
 .govuk-breadcrumbs li.latest-version, .govuk-breadcrumbs li.latest-version a {
   color: #005ea5;
 }

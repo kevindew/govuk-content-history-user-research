@@ -13,7 +13,7 @@
   <div class="related-information">
     {% if showing_current %}
     <p class="current-version">
-      <span class="secondary-text">You're viewing:</span>
+      <span class="secondary-text history-colour">You're viewing:</span>
       <br/>
     {% else %}
     <p>
@@ -40,9 +40,9 @@
             {% if page.version == version[0] %}
             <li class="current-version">
               {% if page.diff %}
-              <span class="secondary-text">You're comparing:</span><br/>
+              <span class="secondary-text history-colour">You're comparing:</span><br/>
               {% else %}
-              <span class="secondary-text">You're viewing:</span><br/>
+              <span class="secondary-text history-colour">You're viewing:</span><br/>
               {% endif %}
             {% else %}
             <li>
@@ -71,9 +71,9 @@
     {% if page.version == 1 %}
       <p class="current-version">
         {% if page.diff %}
-        <span class="secondary-text">You're comparing:</span><br/>
+        <span class="secondary-text history-colour">You're comparing:</span><br/>
         {% else %}
-        <span class="secondary-text">You're viewing:</span><br/>
+        <span class="secondary-text history-colour">You're viewing:</span><br/>
         {% endif %}
     {% else %}
       <p>
