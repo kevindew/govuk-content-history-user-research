@@ -6,6 +6,7 @@ current:
   change_note: |
     Company cars: Advisory Fuel Rates (AFRs) have been updated.
   link: ./
+  diff_link: ./v3-diff.html
 past:
   2:
     published: 2017-02-24
