@@ -1,13 +1,13 @@
 ---
 layout: self-employed-national-insurance-rates
 title: Self-employed National Insurance rates
-version: 1
+version: current
 diff: true
 ---
 
 {% include_relative _breadcrumbs.html %}
 
-{% assign published_date=site.data.self-employed-national-insurance-rates.past[1].published %}
+{% assign published_date=site.data.self-employed-national-insurance-rates.past[3].published %}
 
 {% include_relative _title.html published_date=published_date %}
 
@@ -121,14 +121,12 @@ Rate
 for
 tax
 year
-<del class="diff-old">2015
-</del>
-<ins class="diff-chg">2017
-</ins>
-to
 <del class="diff-old">2016
+to
 </del>
-<ins class="diff-chg">2018
+2017
+<ins class="diff-new">to
+2018
 </ins>
 </th>
 </tr>
@@ -163,7 +161,7 @@ between
 <ins class="diff-chg">£8,164
 </ins>
 and
-<del class="diff-old">£42,385
+<del class="diff-old">£43,000
 </del>
 <ins class="diff-chg">£45,000
 </ins>
@@ -172,7 +170,7 @@ and
 on
 profits
 over
-<del class="diff-old">£42,385
+<del class="diff-old">£43,000
 </del>
 <ins class="diff-chg">£45,000
 </ins>
@@ -202,11 +200,8 @@ to
 pay
 </h2>
 <p>
-<del class="diff-old">You
-</del>
-<ins class="diff-chg">Most
+Most
 people
-</ins>
 pay
 Class
 2
@@ -252,12 +247,13 @@ partnership
 </p>
 </div>
 <h3 id="special-rules-for-specific-jobs">
-<ins class="diff-new">Special
+Special
 rules
 for
 specific
 jobs
-</ins></h3><p><ins class="diff-new">
+</h3>
+<p>
 Some
 self-employed
 people
@@ -273,13 +269,15 @@ may
 want
 to
 pay
-</ins><a href="https://www.gov.uk/voluntary-national-insurance-contributions"><ins class="diff-new">
+<a href="https://www.gov.uk/voluntary-national-insurance-contributions">
 voluntary
 contributions
-</ins></a>.<ins class="diff-new">
+</a>.
 These
 are:
-</ins></p><ul><li><ins class="diff-new">
+</p>
+<ul>
+<li>
 examiners,
 moderators,
 invigilators
@@ -289,7 +287,8 @@ who
 set
 exam
 questions
-</ins></li><li><ins class="diff-new">
+</li>
+<li>
 people
 who
 run
@@ -298,7 +297,8 @@ involving
 land
 or
 property
-</ins></li><li><ins class="diff-new">
+</li>
+<li>
 ministers
 of
 religion
@@ -309,7 +309,8 @@ a
 salary
 or
 stipend
-</ins></li><li><ins class="diff-new">
+</li>
+<li>
 people
 who
 make
@@ -331,7 +332,8 @@ a
 fee
 or
 commission
-</ins></li></ul>
+</li>
+</ul>
 </div>
 </div>
 <div class="column-third add-title-margin">
@@ -386,4 +388,4 @@ Insurance
 </aside>
 </div>
 </div>
-{% include change-history.html data=site.data.self-employed-national-insurance-rates %}
+{% include change-history-previous-diff.html data=site.data.self-employed-national-insurance-rates %}

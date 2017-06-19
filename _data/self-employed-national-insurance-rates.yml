@@ -6,6 +6,7 @@ current:
   change_note: |
     Updated Class 2 and Class 4 profit threshold for 2017-18 tax year; updated Class 2 and Class 4 weekly rates for 2017-18 tax year.
   link: ./
+  diff_link: ./v4-diff.html
 past:
   3:
     published: 2016-04-06
