@@ -9,7 +9,7 @@
       <h1>{{ page.title }}</h1>
       {% if page.version != 'current' or page.diff %}
       <p class="title-contrast history-colour">
-        Published {{ include.published_date | date: '%-d %B %Y' }}
+        published on {{ include.published_date | date: '%-d %B %Y' }}
       </p>
       {% endif %}
     </div>

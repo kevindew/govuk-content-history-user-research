@@ -8,9 +8,9 @@
       {% endif %}
       <p class="context">Guidance</p>
       <h1>{{ page.title }}</h1>
-      {% if page.version != 'current' %}
-      <p class="title-contrast">
-        Published {{ include.published_date | date: '%-d %B %Y' }}
+      {% if page.version != 'current' or page.diff %}
+      <p class="title-contrast history-colour">
+        published on {{ include.published_date | date: '%-d %B %Y' }}
       </p>
       {% endif %}
     </div>
