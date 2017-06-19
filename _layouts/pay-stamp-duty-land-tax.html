@@ -120,7 +120,7 @@
     <div id="global-header-bar"></div>
 
       <div id="wrapper" class="direction-ltr">
-    <main role="main" id="content" class="detailed-guide" lang="en">
+    <main role="main" id="content" class="detailed-guide {% if page.version != 'current' or page.diff %}history-main{% endif %}" lang="en">
 
 {{ content }}
 

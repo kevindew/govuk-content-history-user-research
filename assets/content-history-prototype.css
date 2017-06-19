@@ -21,6 +21,11 @@
   color: rgb(200, 0, 0);
 }
 
+.history-main {
+  border-left: 6px solid rgb(200, 0, 0);
+  padding-left: 16px;
+}
+
 .govuk-breadcrumbs li.latest-version, .govuk-breadcrumbs li.latest-version a {
   color: #005ea5;
 }
