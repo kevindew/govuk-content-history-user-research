@@ -25,7 +25,12 @@
         {% else %}
           <a href="{{ url }}" class="choice">
         {% endif %}
-          <span class="title">Version {{ version[0] }} - Published: {{ version[1].published | date: date_format }}</span>
+          <span class="title">
+            Version {{ version[0] }} - Published: {{ version[1].published | date: date_format }}
+            {% if version[0] == 4 %}
+              (Current)
+            {% endif %}
+          </span>
           <span class="change-note">{{ version[1].change_note }}</span>
         {% if version[0] == include.other %}
           </span>
@@ -37,4 +42,9 @@
     </ul>
   </div>
 </div>
+
 <p class="change-note">{{ versions[include.current].change_note }}</p>
+
+{% if include.current == 4 %}
+<p><strong>This version is currently on GOV.UK<strong></p>
+{% endif %}

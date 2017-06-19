@@ -7,12 +7,18 @@
     <div class="column-one-half">
       <div class="compare-version">
         {% include_relative _compare-version.html current=include.from other=include.to left=true %}
+        {% if include.from > 1 and (include.from | plus: 1) == include.to %}
+          <a href="v{{ include.from | minus: 1 }}-v{{ include.to | minus: 1 }}.html#compare">&larr; Previous Edit</a>
+        {% endif %}
       </div>
     </div>
 
     <div class="column-one-half">
       <div class="compare-version">
         {% include_relative _compare-version.html current=include.to other=include.from %}
+        {% if include.to < 4 and (include.to | minus: 1) == include.from %}
+          <a href="v{{ include.from | plus: 1 }}-v{{ include.to | plus: 1}}.html#compare">Next Edit &rarr;</a>
+        {% endif %}
       </div>
     </div>
   </div>
