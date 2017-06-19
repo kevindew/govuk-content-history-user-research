@@ -2,7 +2,7 @@
   <div class="column-two-thirds">
     <div class="govuk-title length-long">
       {% if page.diff %}
-      <p class="title-contrast history-colour">You're viewing an update of</p>
+      <p class="title-contrast history-colour">You're viewing the edit history of</p>
       {% elsif page.version != 'current' %}
       <p class="title-contrast history-colour">You're viewing an old version of</p>
       {% else %}
@@ -11,7 +11,7 @@
       <h1>{{ page.title }}</h1>
       {% if page.version != 'current' or page.diff %}
       <p class="title-contrast history-colour">
-        published on {{ include.published_date | date: '%-d %B %Y' }}
+        this update was made on {{ include.published_date | date: '%-d %B %Y' }}
       </p>
       {% endif %}
     </div>
