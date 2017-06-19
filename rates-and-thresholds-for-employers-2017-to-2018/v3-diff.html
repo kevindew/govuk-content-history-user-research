@@ -1,12 +1,15 @@
 ---
 layout: rates-and-thresholds-for-employers-2017-to-2018
 title: Rates and thresholds for employers 2017 to 2018
-version: current
+version: 1
+diff: true
 ---
 
-{% include_relative _breadcrumbs.html current=true %}
+{% include_relative _breadcrumbs.html %}
 
-{% include_relative _title.html %}
+{% assign published_date=site.data.rates-and-thresholds-for-employers-2017-to-2018.past[1].published %}
+
+{% include_relative _title.html published_date=published_date %}
 
 {% include_relative _metadata.html %}
 
@@ -557,7 +560,7 @@ version: current
 
         <p>Use <abbr title="Advisory Fuel Rates">AFRs</abbr> to work out mileage costs if you provide company cars to your employees.</p>
 
-        <p>The rates below apply from 1 June 2017.</p>
+        <p>The rates below apply from 1 <del class="diff-old">March</del><ins class="diff-chg">June</ins> 2017.</p>
 
         <table>
           <thead>
@@ -581,7 +584,7 @@ version: current
             </tr>
             <tr>
               <td>Over 2000cc</td>
-              <td>21 pence</td>
+              <td><del class="diff-old">22</del><ins class="diff-chg">21</ins> pence</td>
               <td>14 pence</td>
             </tr>
           </tbody>
@@ -650,6 +653,7 @@ version: current
   </div>
   <div data-sticky-element class="sticky-element">
     <a class="back-to-content" data-track-category="contentsClicked" data-track-action="backToContentsLinkClicked" data-track-label="contents" data-module="track-click" href="#contents">Contents</a>
+
   </div>
 </div>
 

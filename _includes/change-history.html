@@ -21,9 +21,14 @@
     <span class="date">{{ include.data.current.updated | date: "%-d %B %Y" }}</span>
     <br/>
     {{ include.data.current.change_note }}
-    {% unless showing_current %}
+    {% unless showing_current and page.diff != true %}
     <br/><a href="./">View the most up-to-date version</a>
     {% endunless %}
+    {% if include.data.show_diffs %}
+      {% unless page.version == "current" and page.diff %}
+      <br/><a href="{{ include.data.current.diff_link }}">See this update</a>
+      {% endunless %}
+    {% endif %}
     </span>
     </p>
     <div class="change-notes" data-module="toggle">
@@ -47,7 +52,7 @@
               <p style="margin-bottom: 8px">{{ version[1].change_note }}</p>
               {% if include.data.show_diffs %}
                 {% unless page.version == version[0] and page.diff %}
-                <a href="{{ version[1].diff_link }}">Compare with the most up-to-date version</a> - see everything that's changed since {{ version[1].published | date: "%-d %B %Y" }}.<br/>
+                <a href="{{ version[1].diff_link }}">See this update</a><br/>
                 {% endunless %}
               {% endif %}
             </li>
@@ -75,11 +80,6 @@
     {% endif %}
       <span class="date">{{ include.data.past[1].published | date: "%-d %B %Y" }}</span><br/>
       <span style="display: inline-block; margin-bottom: 8px">{{ include.data.past[1].change_note }}</span><br />
-      {% if include.data.show_diffs %}
-        {% unless page.version == 1 and page.diff %}
-        <a href="{{ include.data.past[1].diff_link }}">See everything that’s changed on this page since it was first published</a>.<br/>
-        {% endunless %}
-      {% endif %}
     </p>
   </div>
 </div>
