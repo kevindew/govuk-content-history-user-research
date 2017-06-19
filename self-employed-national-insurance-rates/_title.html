@@ -2,13 +2,13 @@
   <div class="column-two-thirds">
     <div class="govuk-title length-average">
       {% if page.diff %}
-      <p class="title-contrast">You're viewing an update of</p>
+      <p class="title-contrast history-colour">You're viewing an update of</p>
       {% elsif page.version != 'current' %}
-      <p class="title-contrast">You're viewing an old version of</p>
+      <p class="title-contrast history-colour">You're viewing an old version of</p>
       {% endif %}
       <h1>{{ page.title }}</h1>
       {% if page.version != 'current' or page.diff %}
-      <p class="title-contrast">
+      <p class="title-contrast history-colour">
         Published {{ include.published_date | date: '%-d %B %Y' }}
       </p>
       {% endif %}
