@@ -5,13 +5,13 @@ version: 2
 diff: true
 ---
 
-{% include_relative _breadcrumbs.html %}
+{% include _stampduty_breadcrumbs.html %}
 
 {% assign published_date=site.data.pay-stamp-duty-land-tax.past[2].published %}
 
-{% include_relative _title.html published_date=published_date %}
+{% include _stampduty_title.html published_date=published_date %}
 
-{% include_relative _metadata.html %}
+{% include _stampduty_metadata.html %}
 
 <p class="description">
   Find out how to pay your Stamp Duty Land Tax (SDLT) and the time it takes for payments to reach HM Revenue and Customs (HMRC).
