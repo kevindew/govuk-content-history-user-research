@@ -64,7 +64,7 @@
     <div id="global-header-bar"></div>
 
       <div id="wrapper" class="direction-ltr">
-    <main role="main" id="content" class="answer" lang="en">
+    <main role="main" id="content" class="answer {% if page.version != 'current' or page.diff %}history-main{% endif %}" lang="en">
 
 {{ content }}
 
