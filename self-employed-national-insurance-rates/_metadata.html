@@ -1,13 +1,13 @@
 <div class="govuk-metadata direction-ltr" data-module="toggle">
   <dl>
-    <dt>Published:</dt>
-    <dd>{{ site.data.self-employed-national-insurance-rates.published | date: "%-d %B %Y" }}</dd>
-    <dt>Last updated:</dt>
+    <dt>Newest version</dt>
     <dd>
       {{ site.data.self-employed-national-insurance-rates.current.updated | date: "%-d %B %Y" }}
         <a href="#history" data-module="track-click" data-track-category="content-history" data-track-action="see-all-updates-link-clicked" data-track-label="history">
-          see all updates
+          see all versions
         </a>
     </dd>
+    <dt>Oldest version</dt>
+    <dd>{{ site.data.self-employed-national-insurance-rates.published | date: "%-d %B %Y" }}</dd>
   </dl>
 </div>

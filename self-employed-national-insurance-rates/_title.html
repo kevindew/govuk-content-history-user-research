@@ -1,15 +1,13 @@
 <div class="grid-row sidebar-with-body">
   <div class="column-two-thirds">
-    <div class="govuk-title length-average">
-      {% if page.diff %}
-      <p class="title-contrast history-colour">You're viewing the edit history of</p>
-      {% elsif page.version != 'current' %}
-      <p class="title-contrast history-colour">You're viewing an old version of</p>
+    <div class="govuk-title length-average {% if page.diff %}history{% endif %}">
+      {% if page.version != 'current' or page.diff %}
+      <p class="title-contrast">This page is out of date</p>
       {% endif %}
       <h1>{{ page.title }}</h1>
       {% if page.version != 'current' or page.diff %}
-      <p class="title-contrast history-colour">
-        this update was made on {{ include.published_date | date: '%-d %B %Y' }}
+      <p class="title-contrast">
+        Showing changes made on {{ include.published_date | date: '%-d %B %Y' }}
       </p>
       {% endif %}
     </div>
